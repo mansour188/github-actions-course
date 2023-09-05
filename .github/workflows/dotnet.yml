@@ -25,6 +25,10 @@ jobs:
         cd 03-app-dotnet
         dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: |
+            cd 03-app-dotnet
+            dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: |
+            cd 03-app-dotnetdotnet
+            test --no-build --verbosity normal
